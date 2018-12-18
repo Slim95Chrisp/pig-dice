@@ -13,7 +13,7 @@ JavaScript,jQuery, HTML, CSS and bootstrap.
 ## Behaviour Driven Development
 | Behaviour     | Input Example | Output Example |
 | ------------- |:-------------:| -----:|
-| Accept one choice | Clicking via Mouse/Touch Pad | Percentage Score |
+|  |  |  |
 
 ### License
 *MIT License*
