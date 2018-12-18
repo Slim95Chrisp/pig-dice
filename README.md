@@ -4,6 +4,10 @@
 ## Description
 The application allows to players two play the game of Pig Dice.
 Concepts tested include constructors, prototypes, objects and methods.
+## Technologies Used
+JavaScript,jQuery, HTML, CSS and bootstrap.
+## Setup Instructions
+* _Click on the Github link on a web browser of choice_
 
 
 ## Behaviour Driven Development
