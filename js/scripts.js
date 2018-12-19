@@ -75,11 +75,11 @@ $(document).ready(function(){
   });
 
   $("#hold").click(function(){
-    var player1result = total += heat1;
-    parseInt($("#total1").val(player1result));
+    var return1 = total += heat1;
+    parseInt($("#total1").val(return1));
     parseInt($("#current1").val(""));
-    var player2result = total2 += heat2;
-    parseInt($("#total2").val(player2result));
+    var return2 = total2 += heat2;
+    parseInt($("#total2").val(return2));
     parseInt($("#current2").val(""));
   });
 })
