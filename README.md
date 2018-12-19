@@ -2,13 +2,12 @@
 #### Pig Dice is a two player game where each has an opportnity to roll dice and accumulate points. 14/12/2018
 #### Authors **Chrispus Ngure**
 ## Description
-The application allows to players two play the game of Pig Dice.
+The application allows two players to play the game of Pig Dice.
 Concepts tested include constructors, prototypes, objects and methods.
 ## Technologies Used
 JavaScript,jQuery, HTML, CSS and Bootstrap.
 ## Setup Instructions
-* _Click on the Github link on a web browser of choice_
-
+Click https://github.com/Slim95Chrisp/pig-dice/ on a web browser of choice to access the game.
 
 ## Behaviour Driven Development
 | Behaviour     | Input Example | Output Example |
