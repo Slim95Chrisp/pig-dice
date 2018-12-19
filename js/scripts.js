@@ -69,5 +69,12 @@ $(document).ready(function(){
     $("#total2").val(player2total);
     winner();
   });
-  
+  $("#hold").click(function(){
+    var player1result = total += myTurn1;
+    $("#total1").val(player1result);
+    $("#current1").val("");
+    var player2result = player2total += myTurn2;
+    $("#total2").val(player1result);
+    $("#current2").val("");
+  });
 })
