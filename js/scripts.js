@@ -2,67 +2,60 @@
 function play() {
   return Math.floor(6*Math.random())+1
 };
-var playerRoll = 0;
-var playerRoll1 = 0;
-var player;
-var total = 0;
-var myTurn1 = 0;
-var myTurn2 = 0;
-var player1Total = 0;
-var player2Total= 0;
-
-function rollNumber() {
-  playerRoll = play();
-  if (playerRoll === 1) {
-    playerRoll = 0;
-    alert("Rolled 1 your score is 0, " + player + " turn.");
-  }
-};
+var roll = 0, player; total = 0, heat1 = 0, heat2 = 0, total2= 0
 
 function newGame() {
-  playerRoll = 0;
+  roll = 0;
   total = 0;
-  player1Total = 0;
-  player2Total = 0;
-  myTurn1 = 0;
-  myTurn2 = 0;
+  total2 = 0;
+  heat1 = 0;
+  heat2 = 0;
   $("#total1").val("");
   $("#current1").val("");
   $("#total2").val("");
   $("#current2").val("");
-}
+};
+
+function diceRoll() {
+  roll = play();
+  if (roll === 1) {
+    roll = 0;
+    alert("Dice roll is 1, Score is 0, " + player + " turn.");
+  }
+};
+
 function winner(){
   if (total >=100) {
-    alert("player1 won, new game");
+    alert("Player 1 wins Game");
     newGame()
-  } else if (player2Total >= 100){
-    alert("player 2 won, new game");
+  } else if (total2 >= 100){
+    alert("Player 2 wins Game");
   }
 }
 
 function player1() {
   player="Player 2";
-  myturn2=0;
-  playerRoll=0;
+  heat2=0;
+  roll=0;
   $("#current2").val("");
-  rollNumber();
-  total += myTurn1;
-  myTurn1 = playerRoll;
-  $("#current1").val(myTurn1);
+  diceRoll();
+  total += heat1;
+  heat1 = roll;
+  $("#current1").val(heat1);
   $("#total1").val(total);
   winner();
 }
 
 function player2() {
   player="Player 1";
-  myTurn1=0;
-  playerRoll=0;
+  heat1=0;
+  player1Roll=0;
   $("#current1").val("");
-  rollNumber();
-  player2Total += myTurn2;
-  myTurn2 = playerRoll;
-  $("#current2").val(myTurn2);
-  $("#total2").val(player2total);
+  diceRoll();
+  total2 += heat2;
+  heat2 = roll;
+  $("#current2").val(heat2);
+  $("#total2").val(total2);
   winner();
 }
 
@@ -81,10 +74,10 @@ $(document).ready(function(){
   });
 
   $("#hold").click(function(){
-    var player1result = total += myTurn1;
+    var player1result = total += heat1;
     $("#total1").val(player1result);
     $("#current1").val("");
-    var player2result = player2Total += myTurn2;
+    var player2result = total2 += heat2;
     $("#total2").val(player2result);
     $("#current2").val("");
   });
