@@ -76,10 +76,10 @@ $(document).ready(function(){
 
   $("#hold").click(function(){
     var player1result = total += heat1;
-    $("#total1").val(player1result);
-    $("#current1").val("");
+    parseInt($("#total1").val(player1result));
+    parseInt($("#current1").val(""));
     var player2result = total2 += heat2;
-    $("#total2").val(player2result);
-    $("#current2").val("");
+    parseInt($("#total2").val(player2result));
+    parseInt($("#current2").val(""));
   });
 })
