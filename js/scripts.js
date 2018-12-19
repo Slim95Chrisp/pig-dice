@@ -40,35 +40,46 @@ function winner(){
   }
 }
 
+function player1() {
+  player="Player 2";
+  myturn2=0;
+  playerRoll=0;
+  $("#current2").val("");
+  rollNumber();
+  total += myTurn1;
+  myTurn1 = playerRoll;
+  $("#current1").val(myTurn1);
+  $("#total1").val(total);
+  winner();
+}
+
+function player2() {
+  player="Player 1";
+  myTurn1=0;
+  playerRoll=0;
+  $("#current1").val("");
+  rollNumber();
+  player2Total += myTurn2;
+  myTurn2 = playerRoll;
+  $("#current2").val(myTurn2);
+  $("#total2").val(player2total);
+  winner();
+}
+
 // User Interface
 $(document).ready(function(){
   $("#newGame").click(function(){
     newGame();
   });
-  $("#player1").click(function player1(){
-    player="Player 2";
-    myturn2=0;
-    playerRoll=0;
-    $("#current2").val("");
-    rollNumber();
-    total += myTurn1;
-    myTurn1 = playerRoll;
-    $("#current1").val(myTurn1);
-    $("#total1").val(total);
-    winner();
+
+  $("#player1").click(function() {
+    player1();
   });
-  $("#player2").click(function player2(){
-    player="Player 1";
-    myTurn1=0;
-    playerRoll=0;
-    $("#current1").val("");
-    rollNumber();
-    player2Total += myTurn2;
-    myTurn2 = playerRoll;
-    $("#current2").val(myTurn2);
-    $("#total2").val(player2total);
-    winner();
+
+  $("#player2").click(function () {
+    player2();
   });
+
   $("#hold").click(function(){
     var player1result = total += myTurn1;
     $("#total1").val(player1result);
