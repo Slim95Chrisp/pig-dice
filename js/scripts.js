@@ -12,7 +12,7 @@ var player1Total = 0;
 var player2Total= 0;
 
 function rollNumber() {
-  playerRoll = roll()
+  playerRoll = play();
   if (playerRoll === 1) {
     playerRoll = 0;
     alert("Rolled 1 your score is 0, " + player + " turn.");
@@ -43,7 +43,7 @@ function winner(){
 // User Interface
 $(document).ready(function(){
   $("#newGame").click(function(){
-    newgame();
+    newGame();
   });
   $("#player1").click(function player1(){
     player="Player 2";
@@ -59,13 +59,13 @@ $(document).ready(function(){
   });
   $("#player2").click(function player2(){
     player="Player 1";
-    myturn1=0;
+    myTurn1=0;
     playerRoll=0;
     $("#current1").val("");
     rollNumber();
-    player2total += myTurn2;
+    player2Total += myTurn2;
     myTurn2 = playerRoll;
-    $("#current2").val(myTurn1);
+    $("#current2").val(myTurn2);
     $("#total2").val(player2total);
     winner();
   });
@@ -73,8 +73,8 @@ $(document).ready(function(){
     var player1result = total += myTurn1;
     $("#total1").val(player1result);
     $("#current1").val("");
-    var player2result = player2total += myTurn2;
-    $("#total2").val(player1result);
+    var player2result = player2Total += myTurn2;
+    $("#total2").val(player2result);
     $("#current2").val("");
   });
 })
