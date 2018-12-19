@@ -31,3 +31,11 @@ function newGame() {
   $("#total2").val("");
   $("#current2").val("");
 }
+function winner(){
+  if (total >=100) {
+    alert("player1 won, new game");
+    newGame()
+  } else if (player2Total >= 100){
+    alert("player 2 won, new game");
+  }
+}
