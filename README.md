@@ -13,7 +13,10 @@ JavaScript,jQuery, HTML, CSS and Bootstrap.
 ## Behaviour Driven Development
 | Behaviour     | Input Example | Output Example |
 | ------------- |:-------------:| -----:|
-|  |  |  |
+|Roll 1 | Click Roll | Player earns 0 points|
+|Roll 2/3/4/5/6 | Click Roll| Score corresponding points |
+|Accumulate score| Click Hold | Total score |
+| Accumulate 100 points  |Click Hold |Player wins game  |
 
 ### License
 *MIT License*
